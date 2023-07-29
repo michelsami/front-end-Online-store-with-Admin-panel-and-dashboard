@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+}
+
+body{
+    position: relative;
+    background-image: url('/assets/images/login-backgroud.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.error-container{
+    background-color: rgb(210, 28, 9);
+    text-align: center;
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+    height:fit-content;
+}
+
+.error-container > span {
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 7px;
+}
+
+.Form-container{
+    background-color: rgb(31, 30, 30);
+    max-width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 15px;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    font-size:x-large;
+}
+.logo > i{
+    font-size:xx-large;
+}
+.logo > h1{
+    display: inline;
+} 
+
+.loginForm{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-group{
+    width: 90%;
+}
+
+.email {
+    display: block;
+    margin: 4px 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255 , .4);
+    color: white;
+    font-size:medium;
+    padding: 5px;
+    width: 100%;
+}
+
+.password {
+    display: block;
+    margin: 4px 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255 , .4);
+    color: white;
+    font-size:medium;
+    padding: 5px;
+    width: 100%;
+}
+
+.button{
+    width: 100%;
+    color: hsla(0,0%,100%,.95);
+    background: hwb(199 0% 33%);
+    font-size:small;
+    font-weight: bold;
+    padding: 10px 0;
+    border: 1px solid rgba(255, 255, 255 , .1);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #03557b;
+}
+
+.button:active {
+    background-color: #03557b;
+    transform: scale(0.98)
+} 
+
+.bar{
+    width: 70%;
+}
+
+.google{
+    color: #03557b;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    width: 40%;
+    background: rgba(255, 255, 255, .95);
+    font-size:small;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.google > i {
+    color: rgba(75, 163, 118, 0.85);
+    margin-right: 10px;
+}
+
+.google:hover{
+    background: rgba(255, 255, 255, .85);
+    color: #03557b;
+}
+
+.google:active {
+    background-color: #03557b;
+    color: #ffffff;
+    transform: scale(0.98)
+}
+
+.sign-up{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    width: 50%;
+    background: rgba(138, 153, 168, 0.25);
+    color: hsla(0,0%,100%,.9);
+    font-size:small;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.sign-up:hover {
+    background: rgba(138, 153, 168, 0.3);
+}
+
+.sign-up:active {
+    background-color: rgba(138, 153, 168, 0.3);
+    transform: scale(0.98)
+} 
+
+.slogan{
+    position: absolute;
+    top:45% ;
+    left: 45%;
+    font-size:xx-large ;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .slogan{
+        font-size: x-large;
+    }
+    .google > i {
+        color: rgba(75, 163, 118, 0.85);
+        margin-right: 2px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slogan{
+        font-size:large;
+    }
+    .logo {
+        font-size:large;
+    }
+    .logo > i{
+        font-size:x-large;
+    }
+    .google > span{
+        display: none;
+    }
+    .loginForm{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slogan {
+        display: none;
+    }
+    body{
+        background-image: none ;
+    }
+    .Form-container{
+        max-width: 100%;
+    }
+}
