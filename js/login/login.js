@@ -1,19 +1,12 @@
-document.querySelector('.loginForm').addEventListener('submit' , (e) => {
+//import {fetchData} from '/constrollers/login/login.js'
+document.querySelector('.loginForm').addEventListener('submit' , async (e) => {
     e.preventDefault();
     clearErrors();
     const email  = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     const validJson = validateObj(email , password)
     if( check(validJson) ){
-        //instead of using log should fetch to the endpoint that checks with database
-        const payload = new URLSearchParams(validJson)
-        console.log([...payload]);
-        //get token from database and save it in localstorage
-
-        // fetch ("http://localhost:5500/login/client" , { method : "POST"})
-        // .then(res => res.json())
-        // .then( console.log("hello"));
-        
+        fetchData(validJson);
     }
 });
 
@@ -48,4 +41,31 @@ const check = (validJson) => {
 const clearErrors = () => {
     document.querySelector('#error-message').innerText = "";
     document.querySelector('.error-container').style.display = "none" ;
+}
+
+const fetchData = async(validJson) => {
+    // try {
+    //     const res = await fetch ("http://localhost:5500/login/client" , {
+    //     method : "POST",
+    //     headers: {"Content-Type": "application/json"},
+    //     body: JSON.stringify(validJson)
+    // })
+    //     if(!res.ok){
+    //         throw new Error ('Network issue')
+    //     }
+    //     const data = await res.json();
+    //     localStorage.setItem('auth' , data.token)
+    //     //route to main page
+    //     /**
+    //     * *
+    //     * *
+    //     * *
+    //     * *
+    //     * *
+    //     * *
+    //     * */
+    // } catch (error) {
+    //     console.log(error)
+    // } 
+    console.log(validJson);
 }
