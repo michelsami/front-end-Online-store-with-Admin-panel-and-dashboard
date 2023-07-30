@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login - activeties</title>
-    <link rel="stylesheet" type="text/css" href="/css/login/login.css" >
-    <script src="https://kit.fontawesome.com/5fb0cda24d.js" crossorigin="anonymous"></script>
-</head>
-<body >
-    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../css/login/login.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/5fb0cda24d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="error-container">
-        <span id="error-message"></span>
+      <span id="error-message"></span>
     </div>
-    
+
     <div class="container">
-    <div class="Form-container"> 
+      <div class="Form-container">
         <div class="logo">
-            <i class="fa-brands fa-reddit"></i>
-            <h1>activeties</h1>
+          <i class="fa-brands fa-reddit"></i>
+          <h1>activeties</h1>
         </div>
 
-        <form  method="post" class="loginForm">
-            <div class="input-group">
-                <label for="email" class="label">Email or Username</label>
-                <input class="email" type="email" id="email" required>
-            </div>
+        <form method="post" class="loginForm">
+          <div class="input-group">
+            <label for="email" class="label">Email or Username</label>
+            <input class="email" type="email" id="email" required />
+          </div>
 
-            <div class="input-group">
-                <label for="password" class="label">Password</label>
-                <input class="password" type="password" id="password" required>
-            </div>
-            <br>
-            <button class="button" id="button" type="submit">Login</button>
+          <div class="input-group">
+            <label for="password" class="label">Password</label>
+            <input class="password" type="password" id="password" required />
+          </div>
+          <br />
+          <button class="button" id="button" type="submit">Login</button>
         </form>
         <a href="/" class="google">
-            <i class="fa-brands fa-google"></i> 
-            Sign up <span>with google</span> 
+          <i class="fa-brands fa-google"></i>
+          Sign up <span>with google</span>
         </a>
-        <hr class="bar">
+        <hr class="bar" />
 
         <a href="/" class="sign-up">Create an account</a>
-    </div>
+      </div>
 
-    <div class="slogan">
+      <div class="slogan">
         <h1>Lets explore the world <span>TOGETHER.</span></h1>
-    </div>
+      </div>
     </div>
     <script src="/js/login/login.js"></script>
-</body>
+  </body>
 </html>
