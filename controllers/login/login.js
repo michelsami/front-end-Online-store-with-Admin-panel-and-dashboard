@@ -1,6 +1,6 @@
 export const fetchData = async(validJson) => {
     try {
-        const res = await fetch ("http://localhost:5500/login/client" , {
+        const res = await fetch ("http://localhost:4400/login/client" , {
         method : "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(validJson)
